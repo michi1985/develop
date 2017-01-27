@@ -10,8 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  *= require plugins/bootstrap/css/bootstrap.min
  *= require plugins/font-awesome/css/font-awesome.min
  *= require plugins/selectbox/select_option1
@@ -19,5 +17,5 @@
  *= require plugins/owl-carousel/owl.carousel
  *= require css/style
  *= require css/colors/default
+ *= require_self
  */
-
