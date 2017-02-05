@@ -33,7 +33,7 @@
 `$ git clone git@github.com:potepancamp/develop.git`  
 `$ cd develop`  
 `$ bundle install --path vendor/bundle`  
-`$ bundle exec rails db:migrate`  
+`$ bundle exec rails g spree:install`
 
 【エラーが出た時】  
 ~~~
@@ -57,6 +57,11 @@ Visit https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watc
 
 【以下を実行】  
 `$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
+
+`$ bundle exec rails g solidus:auth:install`
+`$ bundle exec rails railties:install:migrations`
+`$ bundle exec rails g solidus_i18n:install`
+`$ bundle exec rails db:migrate`
 
 * Server 起動  
 
