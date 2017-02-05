@@ -33,68 +33,67 @@
 
         <!-- TOPBAR -->
         <div class="topBar">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 hidden-sm hidden-xs">
-                <ul class="list-inline">
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                  <li><a href="#"><i class="fa fa-tumblr"></i></a></li> -->
-                </ul>
-              </div>
-              <div class="col-md-6 col-xs-12">
-                <ul class="list-inline pull-right">
-                 <!--  <li><span><a data-toggle="modal" href='.login-modal'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span></li> -->
-                  <li class="dropdown searchBox">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <li>
-                        <span class="input-group">
-                          <input type="text" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
-                          <span class="input-group-addon" id="basic-addon2">検索</span>
-                        </span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="cart_page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i>¥0</a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <li>ショッピングカート</li>
-                      <li>
-                        <a href="single_product.html">
-                          <div class="media">
-                            <%= image_tag("home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
-                            <div class="media-body">
-                              <h5 class="media-heading">INCIDIDUNT UT <br><span>2 X 199円</span></h5>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="single_product.html">
-                          <div class="media">
-                            <%= image_tag("home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
-                            <div class="media-body">
-                              <h5 class="media-heading">INCIDIDUNT UT <br><span>2 X 199円</span></h5>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <div class="btn-group" role="group" aria-label="...">
-                          <button type="button" class="btn btn-default" onclick="location.href='cart_page.html';">カートを見る</button>
-                          <button type="button" class="btn btn-default" onclick="location.href='checkout-step-1.html';">購入する</button>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6 hidden-sm hidden-xs">
+                        <ul class="list-inline">
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6 col-xs-12">
+                        <ul class="list-inline pull-right">
+                          <li><!-- <span><a data-toggle="modal" href='.login-modal'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span> --></li>
+                          <li class="dropdown searchBox">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <form  id="form01" action="product_grid_left_sidebar.html" method="get">
+                              <li>
+                                <span class="input-group">
+                                  <input type="text" name="searchWord" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
+                                  <span onclick="FormSubmit();" class="input-group-addon addPointer" id="basic-addon2">検索</span>
+                                </span>
+                              </li>
+                              </form>
+                            </ul>
+                          </li>
+                          <li class="dropdown">
+                            <a href="cart_page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i>¥0</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li>ショッピングカート</li>
+                              <li>
+                                <a href="single_product.html">
+                                  <div class="media">
+                                    <%= image_tag("home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
+                                    <div class="media-body">
+                                      <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="single_product.html">
+                                  <div class="media">
+                                    <%= image_tag("home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
+                                    <div class="media-body">
+                                      <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <div class="btn-group" role="group" aria-label="...">
+                                  <button type="button" class="btn btn-default" onclick="location.href='cart_page.html';">カートを見る</button>
+                                  <button type="button" class="btn btn-default" onclick="location.href='checkout_step_1.html';">購入する</button>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-main navbar-default" role="navigation">
@@ -111,96 +110,20 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="javascript:void(0)">Home</a></li>
-                <li class="dropdown megaDropMenu">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Shop</b></a>
-                  <ul class="dropdown-menu row">
-                    <li class="col-sm-3 col-xs-12">
-                      <ul class="list-unstyled">
-                       <li>レディース</li>
-                       <li><a href="product_grid_left_sidebar.html">トップス</a></li>
-                       <li><a href="product_grid_left_sidebar.html">アウター</a></li>
-                       <li><a href="product_grid_left_sidebar.html">ボトムス</a></li>
-                       <li><a href="product_grid_left_sidebar.html">靴</a></li>
-                        <!-- <li><a href="product-grid-right-sidebar.html">Products Sidebar Right</a></li>
-                        <li><a href="product-grid-3-col-filter.html">Products 3 Columns V1</a></li>
-                        <li><a href="product-grid-3-col.html">Products 3 Columns V2</a></li>
-                        <li><a href="product-grid-4-col.html">Products 4 Columns</a></li> -->
-                      </ul>
-                    </li>
-                    <li class="col-sm-3 col-xs-12">
-                      <ul class="list-unstyled">
-                        <!-- <li>Products List View</li>
-                        <li><a href="product-list-left-sidebar.html">Products Sidebar Left</a></li>
-                        <li><a href="product-list-right-sidebar.html">Products Sidebar Right</a></li> -->
-                        <li class="listHeading">メンズ</li>
-                        <li><a href="product_grid_left_sidebar.html">トップス</a></li>
-                       <li><a href="product_grid_left_sidebar.html">アウター</a></li>
-                       <li><a href="product_grid_left_sidebar.html">ボトムス</a></li>
-                       <li><a href="product_grid_left_sidebar.html">靴</a></li>
-                      </ul>
-                    </li>
-                    <li class="col-sm-3 col-xs-12">
-                      <ul class="list-unstyled">
-                        <li>キッズ</li>
-                        <li><a href="product_grid_left_sidebar.html">トップス</a></li>
-                       <li><a href="product_grid_left_sidebar.html">アウター</a></li>
-                       <li><a href="product_grid_left_sidebar.html">ボトムス</a></li>
-                       <li><a href="product_grid_left_sidebar.html">靴</a></li>
-                      </ul>
-                    </li>
-                    <li class="col-sm-3 col-xs-12">
-                      <ul class="list-unstyled">
-                        <li>アクセサリー</li>
-                        <li><a href="product_grid_left_sidebar.html">モバイルケース・アクセサリー</a></li>
-                          <li><a href="product_grid_left_sidebar.html">財布・革小物</a></li>
-                           <li><a href="product_grid_left_sidebar.html">腕時計</a></li>
-                            <li><a href="product_grid_left_sidebar.html">帽子</a></li>
-                      </ul>
-                    <!--   <a href="#" class="menu-photo"><img src="img/menu-photo.jpg" alt="menu-img"></a> -->
-                    </li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About US</a>
-                  <ul class="dropdown-menu dropdown-menu-left">
-                    <li><a href="about_us.html">About Us</a></li>
-                    <!-- <li><a href="signup.html">Register</a></li>
-                    <li><a href="signup-login.html">Register or Login</a></li>
-                    <li><a href="login.html">Login</a></li> -->
-                    <!-- <li><a href="lost-password.html">Password Recovery</a></li> -->
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <!-- <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li> -->
-                    <!-- <li><a href="404.html">404 Not Found</a></li> -->
-<!--                     <li><a href="coming-soon.html">Coming Soon</a></li>
- -->                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">blog</a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <!-- <li><a href="blog-right-sidebar.html">Right Sidebar</a></li> -->
-                    <li><a href="blog_left_sidebar.html">Left Sidebar</a></li>
-                    <!-- <li><a href="blog-fullwidth.html">Full Width</a></li>
-                    <li><a href="blog-single-fullwidth.html">Single Post</a></li>
-                    <li><a href="blog-single-right-sidebar.html">Single Right Sidebar</a></li> -->
-                    <li><a href="blog_single_left_sidebar.html">Single Left Sidebar</a></li>
-                  </ul>
-                </li>
-               <!--  <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="account-dashboard.html">Dashboard</a></li>
-                    <li><a href="account-profile.html">Profile</a></li>
-                    <li><a href="account-all-orders.html">All Orders</a></li>
-                    <li><a href="account-single-order.html">Single Order</a></li>
-                    <li><a href="account-wishlist.html">Wishlist</a></li>
-                    <li><a href="account-address.html">Address</a></li>
-                  </ul>
-                </li> -->
-              </ul>
-            </div><!-- /.navbar-collapse -->
+              <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="javascript:void(0)">Home</a></li>
+                  <li class="dropdown megaDropMenu">
+                    <a href="product_grid_left_sidebar" class="dropdown-toggle">Shop</b></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="about_us" class="dropdown-toggle">About US</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="blog_left_sidebar" class="dropdown-toggle">blog</a>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
           </div>
         </nav>
 
@@ -378,7 +301,7 @@
               </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-              <div class="thumbnail" onclick="location.href='single_product.html';">
+              <div class="thumbnail" onclick="location.href='product_grid_left_sidebar.html';">
                 <div class="imageWrapper">
                   <%= image_tag("home/featured-collection/featured-collection-01.jpg", :alt => "feature-collection-image") %>
                   <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Shoes</a></div>
@@ -389,7 +312,7 @@
               </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-              <div class="thumbnail" onclick="location.href='single_product.html';">
+              <div class="thumbnail" onclick="location.href='product_grid_left_sidebar.html';">
                 <div class="imageWrapper">
                   <%= image_tag("home/featured-collection/featured-collection-02.jpg", :alt => "feature-collection-image") %>
                   <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Bags</a></div>
@@ -400,7 +323,7 @@
               </div>
             </div>
             <div class="col-sm-4 col-xs-12">
-              <div class="thumbnail" onclick="location.href='single_product.html';">
+              <div class="thumbnail" onclick="location.href='product_grid_left_sidebar.html';">
                 <div class="imageWrapper">
                   <%= image_tag("home/featured-collection/featured-collection-03.jpg", :alt => "feature-collection-image") %>
                   <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Glasses</a></div>
@@ -424,17 +347,15 @@
                     <%= image_tag("home/featured-product/product-01.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
-                  <div class="productCaption clearfix">
+                  <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Mauris efficitur</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>199円</h3>
+                    <h3>1990円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -442,17 +363,15 @@
                     <%= image_tag("home/featured-product/product-02.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Nulla facilisi</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>149円</h3>
+                    <h3>1490円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -460,17 +379,15 @@
                     <%= image_tag("home/featured-product/product-03.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Praesent dui felis</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>79円</h3>
+                    <h3>790円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -478,17 +395,15 @@
                     <%= image_tag("home/featured-product/product-04.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Cras eu faucibus</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>109円</h3>
+                    <h3>1090円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -496,17 +411,15 @@
                     <%= image_tag("home/featured-product/product-05.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Mauris lobortis augue</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>199円</h3>
+                    <h3>1990円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -514,17 +427,15 @@
                     <%= image_tag("home/featured-product/product-06.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Suspendisse suscipit</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                   <h3>149円</h3>
+                   <h3>1490円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -532,17 +443,15 @@
                     <%= image_tag("home/featured-product/product-07.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
-                      </ul>
+                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                                        </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Praesent a augue</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>79円</h3>
+                    <h3>790円</h3>
                   </div>
                 </div>
                 <div class="slide">
@@ -550,17 +459,15 @@
                     <%= image_tag("home/featured-product/product-09.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                        <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default"><i class="fa fa-eye"></i></a></li>
+                      <li><a data-toggle ="modal" href =".quick-view" class ="btn btn-default productView">VIEW</a></li>
                       </ul>
                     </div>
                   </div>
                   <div class="productCaption">
                     <a href="single_product.html">
-                      <h5>Cras vel augue</h5>
+                      <h5>商品タイトル</h5>
                     </a>
-                    <h3>109円</h3>
+                    <h3>1090円</h3>
                   </div>
                 </div>
               </div>
@@ -674,59 +581,22 @@
           <div class="row">
             <div class="col-sm-2 col-xs-12">
               <div class="footerLink">
-                <h5>Accessories</h5>
+                <h5>商品をお探しなら</h5>
                 <ul class="list-unstyled">
-                  <li><a href="#">Body care </a></li>
-                  <li><a href="#">Chambray </a></li>
-                  <li><a href="#">Floral </a></li>
-                  <li><a href="#">Rejuvination </a></li>
-                  <li><a href="#">Shaving </a></li>
-                  <li><a href="#">Toilette </a></li>
+                  <li><a href="product_grid_left_sidebar.html">SHOES</a></li>
+                  <li><a href="product_grid_left_sidebar.html">BAGS </a></li>
+                  <li><a href="product_grid_left_sidebar.html">GLASSES </a></li>
                 </ul>
               </div>
             </div>
             <div class="col-sm-2 col-xs-12">
               <div class="footerLink">
-                <h5>BRANDS</h5>
+                <h5>BIGBAGについて</h5>
                 <ul class="list-unstyled">
-                  <li><a href="#">Barbour </a></li>
-                  <li><a href="#">Brioni </a></li>
-                  <li><a href="#">Oliver Spencer</a></li>
-                  <li><a href="#">Belstaff</a></li>
+                 <li><a href="about_us.html">ABOUT US</a></li>
+                 <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                 <li><a href="tokushoho.html">特定商取引法についての表記</a></li>
                 </ul>
-              </div>
-            </div>
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>Accessories</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">Body care </a></li>
-                  <li><a href="#">Chambray </a></li>
-                  <li><a href="#">Floral </a></li>
-                  <li><a href="#">Rejuvination </a></li>
-                  <li><a href="#">Shaving </a></li>
-                  <li><a href="#">Toilette </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>Get in Touch</h5>
-                <ul class="list-unstyled">
-                  <li>Call us at (555)-555-5555</li>
-                  <li><a href="mailto:support@iamabdus.com">support@iamabdus.com</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <div class="newsletter clearfix">
-                <h4>Newsletter</h4>
-                <h3>Sign up now</h3>
-                <p>Enter your email address and get notified about new products. We hate spam!</p>
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="your email address" aria-describedby="basic-addon2">
-                  <a href="#" class="input-group-addon" id="basic-addon2">go <i class="glyphicon glyphicon-chevron-right"></i></a>
-                </div>
               </div>
             </div>
           </div>
@@ -737,7 +607,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-7 col-xs-12">
-              <p>&copy; 2016 Copyright Potepan Store .</p>
+              <p>&copy; 2017 Copyright Potepan Store .</p>
             </div>
             <div class="col-sm-5 col-xs-12">
               <ul class="list-inline">

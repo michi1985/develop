@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# project
+=======
 # 開発環境準備
 
 * **【ImageMagickのインストール】**   
@@ -73,3 +76,4 @@ http://localhost:3000
 * **【Solidus テンプレートダウンロード】**  
 
 `$ git clone git://github.com/solidusio/solidus.git`
+>>>>>>> 26f3eb22b485777000ab19e730b801abcf26ee09

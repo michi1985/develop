@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Terms &amp; Conditions - BIGBAG Store</title>
+    <title>Step # 03 - BIGBAG Store</title>
 
     <!-- PLUGINS CSS STYLE -->
 
@@ -106,7 +106,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><%= image_tag("img/logo.png", :alt => "") %></a>
+              <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -135,7 +135,7 @@
           <div class="row">
             <div class="col-xs-6">
               <div class="page-title">
-                <h2>特定商取引法に関する表記</h2>
+                <h2>お支払い方法</h2>
               </div>
             </div>
             <div class="col-xs-6">
@@ -143,7 +143,7 @@
                 <li>
                   <a href="index.html">Home</a>
                 </li>
-                <li class="active">特定商取引法に関する表記</li>
+                <li class="active">お支払い方法</li>
               </ol>
             </div>
           </div>
@@ -151,67 +151,97 @@
       </section>
 
       <!-- MAIN CONTENT SECTION -->
-      <section class="mainContent clearfix genricContent">
+      <section class="mainContent clearfix stepsWrapper">
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h3>特定商取引法に関する表記</h3>
-             <table class="tablepress">
-<tbody class="row-hover">
-<tr class="row-1 odd">
-  <td class="column-1">販売業者名</td><td class="column-2">○○株式会社</td>
-</tr>
-<tr class="row-2 even">
-  <td class="column-1">代表責任者名</td><td class="column-2">甲野太郎</td>
-</tr>
-<tr class="row-3 odd">
-  <td class="column-1">所在地</td><td class="column-2">〒○○○―○○○○<br>
-東京都○○区○○　○丁目○番○号</td>
-</tr>
-<tr class="row-4 even">
-  <td class="column-1">電話番号</td><td class="column-2">０３－○○○○―○○○○</td>
-</tr>
-<tr class="row-5 odd">
-  <td class="column-1">電話受付時間</td><td class="column-2">９：００～１８：００</td>
-</tr>
-<tr class="row-6 even">
-  <td class="column-1">メールアドレス</td><td class="column-2">******@*****.co.jp</td>
-</tr>
-<tr class="row-7 odd">
-  <td class="column-1">ホームページURL</td><td class="column-2">http://www.*******.co.jp</td>
-</tr>
-<tr class="row-8 even">
-  <td class="column-1">販売価格</td><td class="column-2">各商品ページをご参照ください。</td>
-</tr>
-<tr class="row-9 odd">
-  <td class="column-1">商品代金以外の必要料金</td><td class="column-2">消費税<br>
-送料（全国一律６３０円。商品５，０００円以上の購入で送料無料。）<br>
-振込の場合、振込手数料、コンビニ決済の場合、コンビニ決済手数料</td>
-</tr>
-<tr class="row-10 even">
-  <td class="column-1">お届け時期</td><td class="column-2">入金確認後、直ちに商品を発送いたします。</td>
-</tr>
-<tr class="row-11 odd">
-  <td class="column-1">お支払方法</td><td class="column-2">銀行振込、クレジットカード、コンビニ決済</td>
-</tr>
-<tr class="row-12 even">
-  <td class="column-1">お申込みの有効期限</td><td class="column-2">７日以内にお願いいたします。<br>
-７日間入金がない場合は、キャンセルとさせていただきます。</td>
-</tr>
-<tr class="row-13 odd">
-  <td class="column-1">返品・交換・キャンセル等</td><td class="column-2">商品発送後の返品・返却等はお受けいたしかねます。<br>
-商品が不良の場合のみ交換いたします。キャンセルは注文後２４時間以内に限り受付いたします。<br>
-コンビニ決済を利用された場合、コンビニ店頭での返金はいたしません。</td>
-</tr>
-<tr class="row-14 even">
-  <td class="column-1">返品期限</td><td class="column-2">商品出荷より７日以内にご連絡下さい。</td>
-</tr>
-<tr class="row-15 odd">
-  <td class="column-1">返品送料</td><td class="column-2">不良品の場合は弊社が負担いたします。<br>
-それ以外はお客様のご負担となります。</td>
-</tr>
-</tbody>
-</table>
+              <div class="innerWrapper clearfix stepsPage">
+                <div class="row progress-wizard" style="border-bottom:0;">
+
+  <div class="col-xs-4 progress-wizard-step complete fullBar">
+                    <div class="text-center progress-wizard-stepnum">お届け先情報</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <i class="progress-wizard-dot"></i>
+                  </div>
+
+                  <div class="col-xs-4 progress-wizard-step active">
+                    <div class="text-center progress-wizard-stepnum">お支払い方法</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <i class="progress-wizard-dot"></i>
+                  </div>
+
+                  <div class="col-xs-4 progress-wizard-step disabled">
+                    <div class="text-center progress-wizard-stepnum">入力内容確認</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <i class="progress-wizard-dot"></i>
+                  </div>
+
+                </div>
+
+                <form action="" class="row" method="POST" role="form">
+                  <div class="col-xs-12">
+                    <div class="page-header">
+                      <h4>お支払い方法</h4>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-sm-4 col-xs-12">
+                    <label for="">カード番号</label>
+                    <input type="password" class="form-control" id="">
+                  </div>
+                  <div class="form-group col-sm-4 col-xs-12">
+                    <label for="">有効期限</label>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <span class="step-drop">
+                          <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+
+                          </select>
+                        </span>
+                      </div>
+                      <div class="col-xs-6">
+                        <span class="step-drop">
+                          <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                            <option value="0">2016</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                            <option value="4">2020</option>
+                            <option value="5">2021</option>
+                            <option value="6">2022</option>
+                            <option value="7">2023</option>
+                            <option value="8">2024</option>
+                          </select>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-4 col-xs-12">
+                    <label for="">カード名義人</label>
+                    <input type="text" class="form-control" id="">
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="well well-lg clearfix">
+                      <ul class="pager">
+                      <li class="previous"><a href="checkout-step-2.html">戻る</a></li>
+                        <li class="next"><a href="checkout-step-4.html">次へ</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -235,8 +265,8 @@
               <div class="footerLink">
                 <h5>BIGBAGについて</h5>
                 <ul class="list-unstyled">
-                 <li><a href="about_us.html">ABOUT US</a></li>
-                 <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                 <li><a href="about-us.html">ABOUT US</a></li>
+                 <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
                  <li><a href="tokushoho.html">特定商取引法についての表記</a></li>
                 </ul>
               </div>
@@ -263,7 +293,7 @@
     </div>
 
     <!-- LOGIN MODAL -->
-    <div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
+    <div class="modal fade" id="login" tabindex="-1" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -322,13 +352,15 @@
       </div>
     </div>
 
-    <%= javascript_include_tag "plugins/bootstrap/js/bootstrap.min" %>
-    <%= javascript_include_tag "plugins/rs-plugin/js/jquery.themepunch.tools.min" %>
-    <%= javascript_include_tag "plugins/rs-plugin/js/jquery.themepunch.revolution.min" %>
-    <%= javascript_include_tag "plugins/owl-carousel/owl.carousel" %>
-    <%= javascript_include_tag "plugins/selectbox/jquery.selectbox-0.1.3.min" %>
-    <%= javascript_include_tag "plugins/countdown/jquery.syotimer" %>
-    <%= javascript_include_tag "js/custom" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+    <script src="plugins/countdown/jquery.syotimer.js"></script>
+    <script src="js/custom.js"></script>
 
   </body>
 </html>

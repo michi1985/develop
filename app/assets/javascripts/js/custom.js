@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 	            $(".topBar").css("display","block");
 	        }
 	    });
-	
+
 });
 
 //============================== ALL DROPDOWN ON HOVER =========================
@@ -156,3 +156,8 @@ jQuery(document).ready(function() {
         $(".quick-view").modal("hide");
     });
 });
+function FormSubmit() {
+    var target = document.getElementById("form01");
+    target.method = "post";
+    target.submit();
+  };
