@@ -228,6 +228,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-9 col-sm-8 col-xs-12">
               <div class="row filterArea">
                 <div class="col-xs-6">
@@ -241,224 +242,26 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-01.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
+                <% @products.each do | product | %>
+                  <div class="col-sm-4 col-xs-12">
+                    <div class="productBox">
+                      <div class="productImage clearfix">
+                        <%= image_tag(product.images.first.attachment.url(:large), :alt => "products-img") %>
+                        <div class="productMasking">
+                          <ul class="list-inline btn-group" role="group">
+                            <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                      <div class="productCaption clearfix">
+                        <%= link_to(potepan_product_path(product.id)) do %>
+                          <h5><%= product.name %></h5>
+                        <% end %>
+                        <h3><%= product.prices.first.money %></h3>
                       </div>
                     </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1990円</h3>
-                    </div>
                   </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-02.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>2490円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-03.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1790円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-04.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1490円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-05.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1990円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-06.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>2490円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-07.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1790円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-08.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <!-- <a href="single_product.html"> delete as 課題20170304 -->
-                      <%= link_to(@products) do %> <!-- add as 課題20170304 -->
-                      <% end %>
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1490円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-09.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1990円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-10.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>2490円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-11.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1790円</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="productBox">
-                    <div class="productImage clearfix">
-                      <%= image_tag("img/products/products-12.jpg", :alt => "products-img") %>
-                      <div class="productMasking">
-                        <ul class="list-inline btn-group" role="group">
-                          <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                    <div class="productCaption clearfix">
-                      <a href="single_product.html">
-                        <h5>商品名</h5>
-                      </a>
-                      <h3>1490円</h3>
-                    </div>
-                  </div>
-                </div>
+                <% end %>
               </div>
             </div>
           </div>

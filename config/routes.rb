@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   get 'potepan/index'
   get 'potepan/product_grid_left_sidebar'
   get 'potepan/product_list_left_sidebar'
-  #get 'potepan/products/:id'  #delete as 課題 20170225
-  get 'potepan/single_product' #add as 課題 20170225
-  #namespace :potepan do
-  #  resources :products #add as 課題 20170304
-  #end
+  #get 'potepan/products/:id'  #add as 課題 20170225
+  #get 'potepan/single_product' #delete as 課題 20170225
+  namespace :potepan do
+    resources :products #add as 課題 20170304
+  end
   get 'potepan/cart_page'
   get 'potepan/blog_left_sidebar'
   get 'potepan/blog_right_sidebar'
@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   get 'potepan/about_us'
   get 'potepan/tokushoho'
   get 'potepan/privacy_policy'
-
 end
 
 # == Route Map

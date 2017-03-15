@@ -10,9 +10,8 @@ class PotepanController < ApplicationController
   end
   def checkout_step_4
   end
-  def single_product
-    @single_product = Spree::Product.first
-  end
+  #def single_product
+  #  @single_product = Spree::Product.first
+  #end
   #add as 課題 20170225 -> delete as 課題 20170304
-
 end
