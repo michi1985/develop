@@ -162,25 +162,35 @@
                   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
                     <ul class="nav navbar-nav side-nav">
                       <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#SHOES">SHOES<i class="fa fa-plus"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#SHOES">レディース<i class="fa fa-plus"></i></a>
                         <ul id="SHOES" class="collapse collapseItem">
                           <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>サブカテゴリー名 <span>(6)</span></a></li>
                           </ul>
                       </li>
                       <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#BAGS">BAGS<i class="fa fa-plus"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#BAGS">メンズ<i class="fa fa-plus"></i></a>
                         <ul id="BAGS" class="collapse collapseItem">
                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>サブカテゴリー名 <span>(6)</span></a></li>
                           </ul>
                       </li>
                       <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#GLASSES">GLASSES<i class="fa fa-plus"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#GLASSES">キッズ<i class="fa fa-plus"></i></a>
                         <ul id="GLASSES" class="collapse collapseItem">
                           <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>サブカテゴリー名 <span>(6)</span></a></li>
                           </ul>
                       </li>
                       <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#CLOTHING">CLOTHING<i class="fa fa-plus"></i></a>
+                        <% @prototypes.each do |prototype| %>
+                          <tr id="row_<%= prototype.id %>" data-hook="available_row" class="<%= cycle('odd', 'even')%>">
+                            <td><%= prototype.name %></td>
+                            <td class="actions">
+                              <%= link_to Spree.t(:select), select_admin_prototype_url(prototype), class: 'ajax button select_properties_from_prototype', data: { remote: true } %>
+                            </td>
+                          </tr>
+                        <% end %>
+                      </li>
+                      <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#CLOTHING">アクセサリー<i class="fa fa-plus"></i></a>
                         <ul id="CLOTHING" class="collapse collapseItem">
                           <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>サブカテゴリー名 <span>(6)</span></a></li>
                         </ul>
