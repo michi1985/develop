@@ -8,4 +8,9 @@ class Potepan::ProductsController < ApplicationController
        @product_images = @products.map{ |p| p.display_image.attachment(:large)}
        @product_categories = Spree::Taxon.categories_with_products.pluck(:name).map(&:upcase)
   end
+
+  def show
+      @single_product = Spree::Product.find(params[:id])
+  end
+
 end
