@@ -89,7 +89,7 @@
                     </select>
                   </span>
                   <div class="btn-area">
-                    <a href="cart.html" class="btn btn-primary btn-block">カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <%= link_to populate_potepan_orders_path(quantity: 1, variant_id: @variants.first.id), method: :post do %>カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i><% end %>
                   </div>
                 </div>
               </div>
