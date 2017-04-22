@@ -1,17 +1,17 @@
    <div class="main-wrapper">
 
-      <!-- HEADER -->
+      <%#-- HEADER --%>
       <div class="header clearfix">
 
-        <!-- TOPBAR -->
+        <%#-- TOPBAR --%>
         <%= render 'layouts/topbar' %>
 
-        <!-- NAVBAR -->
+        <%#-- NAVBAR --%>
         <%= render 'layouts/navbar' %>
 
       </div>
 
-      <!-- LIGHT SECTION -->
+      <%#-- LIGHT SECTION --%>
       <section class="lightSection clearfix pageHeader">
         <div class="container">
           <div class="row">
@@ -32,7 +32,7 @@
         </div>
       </section>
 
-      <!-- MAIN CONTENT SECTION -->
+      <%#-- MAIN CONTENT SECTION --%>
       <section class="mainContent clearfix productsContent">
         <div class="container">
           <div class="row">
@@ -68,7 +68,7 @@
                     <div id="price-range"></div>
                   </div>
                   <input class="btn btn-default" type="submit" value="絞り込む">
-                  <!-- <span class="priceLabel">Price: <strong>12 円- 30<円/strong></span> -->
+                  <%#-- <span class="priceLabel">Price: <strong>12 円- 30<円/strong></span> --%>
                 </div>
               </div>
               <div class="panel panel-default filterNormal">
@@ -135,24 +135,24 @@
         </div>
       </section>
 
-      <!-- LIGHT SECTION -->
+      <%#-- LIGHT SECTION --%>
         <%= render 'layouts/lightsection' %>
 
-      <!-- FOOTER -->
+      <%#-- FOOTER --%>
         <%= render 'layouts/footer' %>
 
-      <!-- COPY RIGHT -->
+      <%#-- COPY RIGHT --%>
         <%= render 'layouts/copyright' %>
 
     </div>
 
-    <!-- LOGIN MODAL -->
+    <%#-- LOGIN MODAL --%>
         <%= render 'layouts/loginmodal' %>
 
-    <!-- SIGN UP MODAL -->
+    <%#-- SIGN UP MODAL --%>
         <%= render 'layouts/signupmodal' %>
 
-    <!-- PORDUCT QUICK VIEW MODAL -->
+    <%#-- PORDUCT QUICK VIEW MODAL --%>
         <%= render 'layouts/porductquickviewmodal' %>
 
     <%= javascript_include_tag "plugins/bootstrap/js/bootstrap.min" %>

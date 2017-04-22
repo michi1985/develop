@@ -1,17 +1,17 @@
     <div class="main-wrapper">
 
-      <!-- HEADER -->
+      <%#-- HEADER --%>
       <div class="header clearfix">
 
-        <!-- TOPBAR -->
+        <%#-- TOPBAR --%>
         <%= render 'layouts/topbar' %>
 
-        <!-- NAVBAR -->
+        <%#-- NAVBAR --%>
         <%= render 'layouts/navbar' %>
 
       </div>
 
-      <!-- LIGHT SECTION -->
+      <%#-- LIGHT SECTION --%>
       <section class="lightSection clearfix pageHeader">
         <div class="container">
           <div class="row">
@@ -38,7 +38,7 @@
         </div>
       </section>
 
-      <!-- MAIN CONTENT SECTION -->
+      <%#-- MAIN CONTENT SECTION --%>
       <section class="mainContent clearfix">
         <div class="container">
           <div class="row singleProduct">
@@ -67,7 +67,7 @@
                 <div class="media-body">
                   <ul class="list-inline">
                     <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
-                    <!-- <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Share This</a></li> -->
+                    <%#-- <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Share This</a></li> --%>
                   </ul>
                   <h2>商品名</h2>
                   <h3>1490円</h3>
@@ -82,14 +82,14 @@
                   </span>
                   <span class="quick-drop resizeWidth">
                     <select name="guiest_id4" id="guiest_id4" class="select-drop">
-                    <!--   <option value="0">Qty</option> -->
+                    <%#--   <option value="0">Qty</option> --%>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
                     </select>
                   </span>
                   <div class="btn-area">
-                    <a href="cart_page.html" class="btn btn-primary btn-block">カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <a href="cart.html" class="btn btn-primary btn-block">カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
@@ -169,21 +169,21 @@
         </div>
       </section>
 
-      <!-- FOOTER -->
+      <%#-- FOOTER --%>
         <%= render 'layouts/footer' %>
 
-      <!-- COPY RIGHT -->
+      <%#-- COPY RIGHT --%>
         <%= render 'layouts/copyright' %>
 
     </div>
 
-    <!-- LOGIN MODAL -->
+    <%#-- LOGIN MODAL --%>
         <%= render 'layouts/loginmodal' %>
 
-    <!-- SIGN UP MODAL -->
+    <%#-- SIGN UP MODAL --%>
         <%= render 'layouts/signupmodal' %>
 
-    <!-- PORDUCT QUICK VIEW MODAL -->
+    <%#-- PORDUCT QUICK VIEW MODAL --%>
         <%= render 'layouts/porductquickviewmodal' %>
 
     <%= javascript_include_tag "plugins/bootstrap/js/bootstrap.min" %>
