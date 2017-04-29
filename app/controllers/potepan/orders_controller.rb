@@ -5,13 +5,13 @@ class Potepan::OrdersController < ApplicationController
     include Spree::Core::ControllerHelpers::Store
 
   def index
-     if params[:category]
-      @products = Spree::Product.with_taxons_name( params[:category] ).includes(:prices)
-     else
-       @products = Spree::Product.all
-     end
-       @product_images = @products.map{ |p| p.display_image.attachment(:large)}
-       @product_categories = Spree::Taxon.categories_with_products.pluck(:name).map(&:upcase)
+      @products = if params[:category]
+                    Spree::Product.with_taxons_name( params[:category] ).includes(:prices)
+                else
+                    Spree::Product.all
+                end
+      @product_images = @products.map{ |p| p.display_image.attachment(:large)}
+      @product_categories = Spree::Taxon.categories_with_products.pluck(:name).map(&:upcase)
   end
 
   def show
@@ -26,9 +26,9 @@ class Potepan::OrdersController < ApplicationController
   end
 
   def populate
-    order    = current_order(create_order_if_necessary: true)
-    variant  = Spree::Variant.find(params[:variant_id])
-    quantity = params[:quantity].to_i
+      order    = current_order(create_order_if_necessary: true)
+      variant  = Spree::Variant.find(params[:variant_id])
+      quantity = params[:quantity].to_i
 
     # 2,147,483,647 is crazy. See issue https://github.com/spree/spree/issues/2695.
     if quantity.between?(1, 2_147_483_647)
