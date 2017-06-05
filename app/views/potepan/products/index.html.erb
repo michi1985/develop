@@ -1,3 +1,5 @@
+<% provide(:title, 'SHOP') %>
+
    <div class="main-wrapper">
 
       <%#-- HEADER --%>
@@ -42,16 +44,10 @@
                 <div class="panel-body">
                   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
                     <ul class="nav navbar-nav side-nav">
-                                        <li>
-                                           <%= link_to 'ALL', potepan_products_path %>
-                                         </li>
-                                          <% @product_categories.each do |category| %>
-                                            <li>
-                                              <%= link_to category, potepan_products_path(category: category) %>
-                                           </li>
-                                         <% end %>
-                        </ul>
-                      </li>
+                      <li><%= link_to 'ALL', potepan_products_path %></li>
+                        <% @product_categories.each do |category| %>
+                      <li><%= link_to category, potepan_products_path(category: category) %></li>
+                        <% end %>
                     </ul>
                   </div>
                 </div>
@@ -116,15 +112,15 @@
                         <%= image_tag(@product_images[i]) %>
                         <div class="productMasking">
                           <ul class="list-inline btn-group" role="group">
-                            <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                            </ul>
+                            <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">PRODUCT DETAILS</a></li>
+                          </ul>
                         </div>
                       </div>
                       <div class="productCaption clearfix">
                         <%= link_to(potepan_product_path(product.id)) do %>
                           <h5><%= product.name %></h5>
                         <% end %>
-                        <h3><%= product.prices.first.money %></h3>
+                        <h3><%= product.prices.second.money %></h3>
                       </div>
                     </div>
                   </div>
@@ -152,8 +148,14 @@
     <%#-- SIGN UP MODAL --%>
         <%= render 'layouts/signupmodal' %>
 
-    <%#-- PORDUCT QUICK VIEW MODAL --%>
-        <%= render 'layouts/porductquickviewmodal' %>
+    <%#-- PROUCT QUICK VIEW MODAL --%>
+        <% @products.each.with_index do |product, i| %>
+          <%= render partial: 'potepan/common/product_view_modal', locals: {
+                product: product,
+                product_image: @product_images[i],
+                product_order: i,
+                variant: products.prices.second.money[i] } %>
+        <% end %>
 
     <%= javascript_include_tag "plugins/bootstrap/js/bootstrap.min" %>
     <%= javascript_include_tag "plugins/rs-plugin/js/jquery.themepunch.tools.min" %>

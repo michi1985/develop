@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <body>
+<% provide(:title, 'HOME') %>
 
     <div class="main-wrapper">
 
@@ -123,7 +120,6 @@
                       <%#= link_to potepan_single_product_path, class: 'btn primary-btn' do %>
                       <!--  Buy Now<i class="glyphicon glyphicon-chevron-right"></i> -->
                       <%# end %>
-                      <!-- delete as 課題20170304 -->
                     </span>
                   </div>
                 </div>
@@ -205,7 +201,7 @@
                 <div class="imageWrapper">
                   <%= image_tag("home/featured-collection/shirts.jpg", :alt => "feature-collection-image") %>
                   <div class="masking">
-                    <%= link_to 'View SHIRTS', potepan_products_path(category: 'SHIRTS'), class: 'btn viewBtn'  %>
+                    <%= link_to 'TO SHIRTS PRODUCTS', potepan_products_path(category: 'SHIRTS'), class: 'btn viewBtn'  %>
                   </div>
                 </div>
                 <div class="caption">
@@ -218,7 +214,7 @@
                 <div class="imageWrapper">
                   <%= image_tag("home/featured-collection/bag.jpg", :alt => "feature-collection-image") %>
                   <div class="masking">
-                    <%= link_to 'View Bags', potepan_products_path(category: 'BAGS'), class: 'btn viewBtn'  %>
+                    <%= link_to 'TO BAGS PRODUCTS', potepan_products_path(category: 'BAGS'), class: 'btn viewBtn'  %>
                   </div>
                 </div>
                 <div class="caption">
@@ -231,7 +227,7 @@
                 <div class="imageWrapper">
                   <%= image_tag("home/featured-collection/mag.jpg", :alt => "feature-collection-image") %>
                   <div class="masking">
-                    <%= link_to 'View Mugs', potepan_products_path(category: 'MUGS'), class: 'btn viewBtn'  %>
+                    <%= link_to 'TO MUGS PRODUCTS', potepan_products_path(category: 'MUGS'), class: 'btn viewBtn'  %>
                   </div>
                 </div>
                 <div class="caption">
@@ -248,16 +244,29 @@
             </div>
             <div class="col-xs-12">
               <div class="owl-carousel featuredProductsSlider">
+               <% @new_arrivals.each.with_index do |product, i| %>
                 <div class="slide">
                   <div class="productImage clearfix">
-                    <%= image_tag("home/featured-product/product-01.jpg", :alt => "featured-product-img") %>
+                   <%= image_tag(@new_arrival_images[i], :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" data-target=<%= "#quick-view-#{i}" %> class="btn btn-default productView">PRODUCTS DETAILS</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
+                    <h5><%= link_to product.name, potepan_product_path(product.id) %></h5>
+                    <h4 class='text-left'><%= product.prices.second.money %></h4>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+                      <!-- </ul>
+                    </div>
+                  </div> -->
+                  <!-- <div class="productCaption">
                     <a href="single_product.html">
                       <h5>商品タイトル</h5>
                     </a>
@@ -269,8 +278,8 @@
                     <%= image_tag("home/featured-product/product-02.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
@@ -285,8 +294,8 @@
                     <%= image_tag("home/featured-product/product-03.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
@@ -301,8 +310,8 @@
                     <%= image_tag("home/featured-product/product-04.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
@@ -317,8 +326,8 @@
                     <%= image_tag("home/featured-product/product-05.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
@@ -333,8 +342,8 @@
                     <%= image_tag("home/featured-product/product-06.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
@@ -349,8 +358,8 @@
                     <%= image_tag("home/featured-product/product-07.jpg", :alt => "featured-product-img") %>
                     <div class="productMasking">
                       <ul class="list-inline btn-group" role="group">
-                                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
-                                        </ul>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default productView">VIEW</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="productCaption">
@@ -378,7 +387,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="row latestArticles">
             <div class="col-xs-12">
               <div class="page-header">
@@ -455,7 +464,10 @@
         <%= render 'layouts/signupmodal' %>
 
     <!-- PORDUCT QUICK VIEW MODAL -->
-        <%= render 'layouts/porductquickviewmodal' %>
-
-  </body>
-</html>
+        <% @new_arrivals.each.with_index do |product, i| %>
+          <%= render partial: 'potepan/common/product_view_modal', locals: {
+                product: product,
+                product_image: @new_arrival_images[i],
+                product_order: i,
+                variant: @new_arrival_variants[i]} %>
+        <% end %>
