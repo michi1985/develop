@@ -149,13 +149,7 @@
         <%= render 'layouts/signupmodal' %>
 
     <%#-- PROUCT QUICK VIEW MODAL --%>
-        <% @products.each.with_index do |product, i| %>
-          <%= render partial: 'potepan/common/product_view_modal', locals: {
-                product: product,
-                product_image: @product_images[i],
-                product_order: i,
-                variant: products.prices.second.money[i] } %>
-        <% end %>
+    
 
     <%= javascript_include_tag "plugins/bootstrap/js/bootstrap.min" %>
     <%= javascript_include_tag "plugins/rs-plugin/js/jquery.themepunch.tools.min" %>
