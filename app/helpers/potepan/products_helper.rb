@@ -1,2 +1,0 @@
-module Potepan::ProductsHelper
-end

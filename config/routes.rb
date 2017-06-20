@@ -9,10 +9,15 @@ Rails.application.routes.draw do
   get 'potepan/index'
   get 'potepan/product_grid_left_sidebar'
   get 'potepan/product_list_left_sidebar'
-  #get 'potepan/products/:id'  #add as 課題 20170225
-  #get 'potepan/single_product' #delete as 課題 20170225
   namespace :potepan do
-    resources :products #add as 課題 20170304
+    resources :products
+    resources :orders, except: [:index, :new, :create, :destroy] do
+      post :populate, on: :collection
+    end
+
+    get '/cart', to: 'orders#edit', as: :cart
+    patch '/cart', to: 'orders#update', as: :update_cart
+    put '/cart/empty', to: 'orders#empty', as: :empty_cart
   end
   get 'potepan/cart_page'
   get 'potepan/blog_left_sidebar'
